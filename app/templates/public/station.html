@@ -1,0 +1,39 @@
+{% extends "public/templates/public_template.html" %}
+
+{% block title %} Station {% endblock %}
+
+{% block main %}
+
+{% for station_item in all_stations %}
+<div class="container">
+    <div class="row">
+        <div class="col-7">
+            <div class="mt-5">
+                <div class="gun-description" style="border-radius: 5px;">
+                    {{ station_item[5] }}
+
+                </div>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="mt-5">
+                <div class="card" style="background-color:rgba(209, 206, 206, 0.5)">
+                    <img class="card-img-top" src={{ station_item[6] }} alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ station_item[1] }}</h5>
+                        <p class="card-text">
+                        <ul>
+                            <li>Население: {{ station_item[2] }} </li>
+                            <li>Дата открытия: {{ station_item[3] }}</li>
+                            <li>Статус: {{ station_item[4] }}</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

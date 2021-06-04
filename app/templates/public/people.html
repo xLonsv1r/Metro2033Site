@@ -1,0 +1,38 @@
+{% extends "public/templates/public_template.html" %}
+
+{% block title %} People {% endblock %}
+
+{% block main %}
+
+{% for people in all_people %}
+<div class="container">
+    <div class="row">
+        <div class="col-7">
+            <div class="mt-5">
+                <div class="gun-description" style="border-radius: 5px;">
+                    {{ people[5] }}
+
+                </div>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="mt-5">
+                <div class="card" style="background-color:rgba(209, 206, 206, 0.5)">
+                    <img class="card-img-top" src={{ people[6] }} alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ people[1] }}</h5>
+                        <p class="card-text">
+                        <ul>
+                            <li>Дата рождения : {{ people[4] }} </li>
+                            <li>Пушка : {{ gun_name }} </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
