@@ -29,12 +29,6 @@ def get_all_people():
     result = cursor.fetchall()
     return result
 
-def update_album_data(artist_name):
-
-    sql = """ UPDATE albums SET artist = ? WHERE artist = 'John Doe'"""
-    cursor.execute(sql, (artist_name,))
-    conn.commit()
-
 
 def get_gun_by_id(gun_id):
 
