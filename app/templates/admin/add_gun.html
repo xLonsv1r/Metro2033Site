@@ -1,0 +1,39 @@
+{% extends "admin/templates/admin_template.html" %}
+
+{% block title %} Admin {% endblock %}
+
+{% block main %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Gun form</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <form action="" method="post">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputGunName">Name</label>
+                <input type="text" class="form-control" name="inputGunName" id="inputGunName" placeholder="Name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputBulletCount">Bullet count</label>
+                <input type="number" class="form-control" name="inputBulletCount" id="inputBulletCount" placeholder="100">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputDescription">Description</label>
+            <input type="text" class="form-control" name="inputDescription" id="inputDescription" placeholder="Description">
+        </div>
+        <div class="form-group">
+            <label for="inputPhotoName">Name photo</label>
+            <input type="text" class="form-control" name="inputPhotoName" id="inputPhotoName" placeholder="example.png or example.jpg">
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
+
+{% endblock %}
