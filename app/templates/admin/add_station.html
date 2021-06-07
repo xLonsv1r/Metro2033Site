@@ -1,0 +1,50 @@
+{% extends "admin/templates/admin_template.html" %}
+
+{% block title %} Admin {% endblock %}
+
+{% block main %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Station form</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <form action="" method="post">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputStationName">Name</label>
+                <input type="text" class="form-control" name="inputStationName" id="inputStationName" placeholder="Name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPeopleCount">People count</label>
+                <input type="number" class="form-control" name="inputPeopleCount" id="inputPeopleCount" placeholder="100">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputDate">Open date</label>
+            <input type="date" class="form-control" name="inputDate" id="inputDate" placeholder="Open Date">
+        </div>
+        <div class="form-group">
+            <label for="inputStatus">Status</label>
+            <input type="text" class="form-control" name="inputStatus" id="inputStatus" placeholder="Status">
+        </div>
+        <div class="form-group">
+            <label for="inputDescription">Description</label>
+            <input type="text" class="form-control" name="inputDescription" id="inputDescription" placeholder="Description">
+        </div>
+        <div class="form-group">
+            <label for="inputPhotoName">Name photo</label>
+            <input type="text" class="form-control" name="inputPhotoName" id="inputPhotoName" placeholder="example.png or example.jpg">
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+    
+</div>
+
+
+
+{% endblock %}

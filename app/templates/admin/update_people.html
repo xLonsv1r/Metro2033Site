@@ -1,0 +1,44 @@
+{% extends "admin/templates/admin_template.html" %}
+
+{% block title %} Admin {% endblock %}
+
+{% block main %}
+
+
+
+{% for people_item in all_people %}
+<form action="" method="post">
+    <div class="mt-5">
+        <div class="form-row">
+            <h3> People id: {{ people_item[0] }}</h3>
+            <div class="form-group col-md-6">
+                <label for="inputPeopleName"><b>Name</b></label>
+                <input type="text" class="form-control" name="inputPeopleName" value="{{ people_item[1] }}" id="inputGunName" placeholder="Name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputIdStation"><b>id station</b></label>
+                <input type="number" class="form-control" name="inputIdStation" value="{{ people_item[2] }}" placeholder="100">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputIdGun"><b>id gun</b></label>
+                <input type="number" class="form-control" name="inputIdGun" value="{{ people_item[3] }}" placeholder="100">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputDescription"><b>Description</b></label>
+            <textarea class="form-control" name="inputDescription" id="description" rows="6">{{ people_item[5] }}</textarea>
+            
+        </div>
+        <div class="form-group">
+            <label for="inputPhotoName"><b>Name photo</b></label>
+            <input type="text" class="form-control" name="inputPhotoName" value="{{ people_item[6] }}" id="inputPhotoName" placeholder="example.png or example.jpg">
+        </div>
+        <button type="submit" name="update" value="{{ people_item[0] }}" class="btn btn-primary"><b>Update</b></button>
+    </div>
+   
+</form>
+
+{% endfor %}
+
+
+{% endblock %}

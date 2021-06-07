@@ -19,22 +19,25 @@
 </div>
 {% for gun_item in all_guns %}
     <form action="" method="post">
-        <div class="row">
-            {% for gun_field in range(gun_item|length) %}
-            <div class="col">
-                {% if gun_field == 3 %}
-                <span class="d-inline-block text-truncate" style="max-width: 150px;">
-                    {{ gun_item[gun_field] }}
-                </span>
-                {% else %}
-                    {{ gun_item[gun_field] }}
-                {% endif %}
-            </div>
-            {% endfor %}
-            <div class="col">
-                <button type="submit" name="delete" value="{{ gun_item[0] }}" class="btn btn-danger">Delete</button>
+        <div class="mt-5">
+            <div class="row">
+                {% for gun_field in range(gun_item|length) %}
+                <div class="col">
+                    {% if gun_field == 3 %}
+                    <span class="d-inline-block text-truncate" style="max-width: 150px;">
+                        {{ gun_item[gun_field] }}
+                    </span>
+                    {% else %}
+                        {{ gun_item[gun_field] }}
+                    {% endif %}
+                </div>
+                {% endfor %}
+                <div class="col">
+                    <button type="submit" name="delete" value="{{ gun_item[0] }}" class="btn btn-danger">Delete</button>
+                </div>
             </div>
         </div>
+        
     </form>
 
 {% endfor %}
