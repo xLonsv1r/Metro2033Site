@@ -50,11 +50,13 @@ def station():
 
 @app.route("/people")
 def people():
+    guns_id = []
     all_people = get_all_people()
-    gun_id = all_people[0][3]
-    gun_name = get_gun_by_id(gun_id)
-    print(gun_name[0])
-    return render_template("public/people.html", all_people=all_people,gun_name=gun_name[0])
+    for people in all_people:
+        guns_id.append(get_gun_by_id(people[3]))
+
+
+    return render_template("public/people.html", all_people=all_people,gun_name=guns_id)
 
 @app.route("/guns")
 def guns():
