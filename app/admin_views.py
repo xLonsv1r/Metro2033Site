@@ -113,7 +113,9 @@ def add_new_people(name, id_station, id_gun, birthday_date, description, photo_n
 
 @app.route("/admin/dashboard")
 def admin_dashboard():
-    return render_template("admin/station.html")
+
+    all_stations = get_all_stations()
+    return render_template("admin/station.html", all_stations=all_stations)
 
 
 
